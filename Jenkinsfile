@@ -3,13 +3,19 @@ pipeline {
   stages {
     stage ('Initialize') {
       steps {
-        sh 'nodejs --version' 
+        sh 'npm install' 
       }
     }
     stage ('working_directory') {
       steps {
-        sh 'pwd'
+        sh 'npm start'
       }
     }
+    stage ('stage3') {
+      steps {
+        sh 'ls'
+      }
+    }
+    
    }  
 }

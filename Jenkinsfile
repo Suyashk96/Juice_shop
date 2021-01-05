@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Clean_cache') {
       steps {
-        sh 'npm cache clean --force' 
+        sh 'ls' 
       }
     }
     
@@ -14,7 +14,7 @@ pipeline {
     }
     stage ('working_directory') {
       steps {
-        sh 'npm start'
+        sh 'sudo npm start'
       }
     }
     stage ('stage3') {

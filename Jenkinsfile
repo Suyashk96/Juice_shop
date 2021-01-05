@@ -3,18 +3,18 @@ pipeline {
   stages {
     stage ('Clean_cache') {
       steps {
-        sh 'npm cache clean --force' 
+        sh 'whoami' 
       }
     }
     
     stage ('Initialize') {
       steps {
-        sh 'sudo npm install' 
+        sh 'npm install' 
       }
     }
     stage ('working_directory') {
       steps {
-        sh 'sudo npm start --unsafe-perm'
+        sh 'npm start --unsafe-perm'
       }
     }
     stage ('stage3') {

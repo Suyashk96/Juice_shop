@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Clean_cache') {
       steps {
-        sh 'ls' 
+        sh 'npm cache clean --force' 
       }
     }
     

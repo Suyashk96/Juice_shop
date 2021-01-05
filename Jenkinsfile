@@ -14,7 +14,7 @@ pipeline {
     }
     stage ('working_directory') {
       steps {
-        sh 'sudo npm start'
+        sh 'npm start --unsafe-perm'
       }
     }
     stage ('stage3') {

@@ -9,12 +9,12 @@ pipeline {
     
     stage ('Initialize') {
       steps {
-        sh 'npm install' 
+        sh 'sudo npm install' 
       }
     }
     stage ('working_directory') {
       steps {
-        sh 'npm start --unsafe-perm'
+        sh 'sudo npm start --unsafe-perm'
       }
     }
     stage ('stage3') {

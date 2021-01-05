@@ -1,9 +1,10 @@
 pipeline {
   agent any 
+  tools {nodejs "node"}
   stages {
-    stage ('Clean_cache') {
+    stage ('Check_config') {
       steps {
-        sh 'whoami' 
+        sh 'npm config ls' 
       }
     }
     
@@ -14,7 +15,7 @@ pipeline {
     }
     stage ('working_directory') {
       steps {
-        sh 'npm start --unsafe-perm'
+        sh 'npm start'
       }
     }
     stage ('stage3') {
